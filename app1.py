@@ -71,7 +71,7 @@ st.markdown("##")
 st.button("Submit Form")
 st.write("Please confirm all details provided are correct before clicking submit")
          
-img = Image.open("Capture.jpg")
+img = Image.open("Capture.JPG")
 st.sidebar.image(img)
 
 st.sidebar.header("Tenancy Eligibility Checker")
