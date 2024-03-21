@@ -25,12 +25,9 @@ if email:
 
 phone_number_str = st.text_input("Phone Number", value="", max_chars=11)
 
-# Validate input to ensure it only contains digits
 if phone_number_str:  # Check if the input is not empty
-    if not phone_number_str.isdigit():
-        st.warning("Please enter a valid phone number consisting only of digits (0-9).")
-    elif len(phone_number_str) < 11:
-        st.warning("Please enter a phone number with 11 digits.")
+    if not phone_number_str.isdigit() or len(phone_number_str) != 11:
+        st.warning("Please enter a valid phone number with 11 digits consisting only of digits (0-9).")
     else:
         phone_number = int(phone_number_str)
 else:
