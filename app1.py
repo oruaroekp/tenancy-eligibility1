@@ -28,6 +28,7 @@ phone_number_str = st.text_input("Phone Number", value="", max_chars=11)
 if phone_number_str:  # Check if the input is not empty
     if not phone_number_str.isdigit() or len(phone_number_str) != 11:
         st.warning("Please enter a valid phone number with 11 digits consisting only of digits (0-9).")
+        phone_number = None  # Set phone_number to None if input is invalid
     else:
         phone_number = int(phone_number_str)
 else:
@@ -37,6 +38,7 @@ else:
 if phone_number is not None:
     # Further processing or actions can be performed here
     pass
+
 
 st.text_input("Current Address")
 
