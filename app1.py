@@ -29,13 +29,16 @@ phone_number_str = st.text_input("Phone Number", value="", max_chars=11)
 if not phone_number_str.isdigit():
     st.warning("Please enter a valid phone number consisting only of digits (0-9).")
     phone_number_str = ""
-
-# Check if the length of the input is less than 11
-if len(phone_number_str) < 11:
+elif len(phone_number_str) < 11:
     st.warning("Please enter a phone number with 11 digits.")
     phone_number_str = ""
+else:
+    phone_number = int(phone_number_str)
 
-phone_number = int(phone_number_str) if phone_number_str.isdigit() else None
+# Only proceed if the phone number is valid
+if phone_number is not None:
+    # Further processing or actions can be performed here
+    pass
 
 st.text_input("Current Address")
 
