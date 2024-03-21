@@ -36,7 +36,7 @@ else:
     phone_number = int(phone_number_str)
 
 # Only proceed if the phone number is valid
-if phone_number is not None:
+if 'phone_number' in locals():
     # Further processing or actions can be performed here
     pass
 
